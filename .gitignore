@@ -1,4 +1,5 @@
-
+secrets.toml
 Ignore Python cache files
 pycache/
 *.pyc
+*.mp4
