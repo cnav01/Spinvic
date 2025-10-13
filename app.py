@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import time
-from scripts.analysis_pipeline_updated import (
+from scripts.analysis_pipeline_v2 import (
     process_video_to_csv,
     generate_comparison_report,
     generate_generative_ai_feedback, 

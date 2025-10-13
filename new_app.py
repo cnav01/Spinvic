@@ -9,7 +9,7 @@ import shutil
 from PIL import Image
 
 # Import specific functions, objects, and constants directly from your pipeline script
-from scripts.cricket_analysis_pipeline import (
+from scripts.analysis_pipeline_v3 import (
     pose,         
     mp_pose,      
     calculate_angle_2d,
