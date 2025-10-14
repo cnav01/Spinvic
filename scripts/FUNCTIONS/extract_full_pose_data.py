@@ -57,4 +57,17 @@ def extract_full_pose_data(video_path: str, output_csv_path: str) -> None:
                     world_lm = results.world_landmarks.landmark[i]
                     current_frame_row.extend([world_lm.x, world_lm.y, world_lm.z, world_lm.visibility])
             else: 
+                num_landmark_cols_per_type = 4 #x,y,z,visibility per landmark
+                total_landmark_cols = 33 * num_landmark_cols_per_type * 2 #33 landmarks, 4 values each, 2 types (2D and 3D)
+                current_frame_row.extend([np.nan] * total_landmark_cols)
+
+            frame_data_rows.append(current_frame_row)
+            frame_count += 1
+    
+    cap.release()
+
+    # Create a DataFrame and save to CSV
+    df = pd.DataFrame(frame_data_rows, columns=columns)
+    df.to_csv(output_csv_path, index=False)
+    print(f"Pose data for {frame_count} frames extracted and saved to {output_csv_path}")
 
