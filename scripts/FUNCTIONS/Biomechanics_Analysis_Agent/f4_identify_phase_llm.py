@@ -1,7 +1,7 @@
 import json
-import typing import Dict, Any
+from typing import Dict, Any
 
-def identify_llm_phase(video_path: str, prompt: str) -> Dict[str, Any]:
+def identify_llm_phase(video_path: str, prompt: str, bowler_hand: str) -> Dict[str, Any]:
     """
     This function takes a video path and a prompt, calls the Gemini Pro Vision API,
     and returns the parsed JSON response.
@@ -54,7 +54,7 @@ def identify_llm_phase(video_path: str, prompt: str) -> Dict[str, Any]:
 
     print(f"[{bowler_hand} Bowler] Initiating LLM phase detection for video: {video_path}")
 
-    llm_output = call_gemini_pro_vision_with_video(phase_detection_prompt, video_path)
+    llm_output = call_gemini_pro_vision_api(phase_detection_prompt, video_path)
 
     if llm_output:
         print(f"LLM successfully identified phases. Raw output snippet: {json.dumps(llm_output, indent=2)[:200]}...") # Print a snippet for brevity

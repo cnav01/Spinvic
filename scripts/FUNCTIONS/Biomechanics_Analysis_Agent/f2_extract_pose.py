@@ -31,7 +31,7 @@ def extract_full_pose_data(video_path: str, output_csv_path: str) -> None:
         columns.extend([f'world_lm_{i}_x', f'world_lm_{i}_y', f'world_lm_{i}_z', f'world_lm_{i}_visibility'])
 
         #setting up mediapipe pose model
-    with mo_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5, static_image_mode=False) as pose:
+    with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5, static_image_mode=False) as pose:
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
