@@ -6,7 +6,7 @@ def identify_llm_phase(video_path: str, prompt: str, bowler_hand: str) -> Dict[s
     This function takes a video path and a prompt, calls the Gemini Pro Vision API,
     and returns the parsed JSON response.
 
-    Args:  
+    Args:   a
         video_path (str): The path to the video file.
         prompt (str): The text prompt to send to the API.
 
@@ -21,7 +21,7 @@ def identify_llm_phase(video_path: str, prompt: str, bowler_hand: str) -> Dict[s
 
     The video frames start from index 0.
 
-    ### Critical Events to Identify:
+    ### Critical Events to Identify: 
 
     1.  **Back Foot Contact (BFC):** The first frame where the bowler's back foot makes solid contact
         with the ground after their jump or gather. This marks the beginning of the delivery stride.
