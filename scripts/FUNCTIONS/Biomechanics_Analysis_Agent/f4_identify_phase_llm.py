@@ -6,7 +6,7 @@ def identify_llm_phase(video_path: str, prompt: str, bowler_hand: str) -> Dict[s
     This function takes a video path and a prompt, calls the Gemini Pro Vision API,
     and returns the parsed JSON response.
 
-    Args:
+    Args:  
         video_path (str): The path to the video file.
         prompt (str): The text prompt to send to the API.
 
