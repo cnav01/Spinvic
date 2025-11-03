@@ -2,3 +2,7 @@ data\
 chunked_data\
 db_storre\
 processed_data\
+.env
+temp_data.jsonl
+chroma_db/
+ragvenv/
