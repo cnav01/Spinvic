@@ -1,0 +1,4 @@
+pymupdf
+langchain-text-splitters
+chromadb
+sentence-transformers
